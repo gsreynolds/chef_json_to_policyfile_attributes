@@ -1,0 +1,26 @@
+{
+  "name": "example1",
+  "description": "This is an example role defined as JSON",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "corp": {
+      "packages": [
+        "httpd"
+      ]
+    },
+    "apache": {
+      "something": {
+        "release": "23.el7"
+      }
+    },
+    "2": {
+      "test": "test"
+    },
+    "topleveltest": "test"
+  },
+  "override_attributes": {},
+  "run_list": [
+    "recipe[example]"
+  ]
+}
