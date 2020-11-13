@@ -18,38 +18,47 @@ default['apache']['something']['release'] = '23.el7'
 default['2']['test'] = 'test'
 default['topleveltest'] = 'test'
 
-# default attributes from example1 environment
-default['example1']['corp']['packages'] = ["httpd"]
-default['example1']['apache']['something']['release'] = '23.el7'
-default['example1']['2']['test'] = 'test'
-default['example1']['topleveltest'] = 'test'
+# default attributes from example1 role
+default['corp']['packages'] = ["httpd"]
+default['apache']['something']['release'] = '23.el7'
+default['2']['test'] = 'test'
+default['topleveltest'] = 'test'
 
-# override attributes from example1 environment
-override['example1']['a']['ABC']['env_name'] = 'DEV'
-override['example1']['a']['ABC']['database']['server'] = 'a'
-override['example1']['a']['ABC']['database']['name'] = 'qa'
-override['example1']['a']['ABC']['database']['user'] = 'qa'
-override['example1']['a']['ABC']['database']['sid'] = '123'
-override['example1']['a']['ABC']['database']['port'] = '1000'
-override['example1']['a']['webserver']['conn']['pool_size'] = '10'
-override['example1']['a']['webserver']['something']['somethingmore']['test'] = [1000, 2000]
-override['example1']['a']['server']['uri'] = 'example.com'
-override['example1']['a']['s3']['remote_path'] = '/path/'
-override['example1']['a']['tar.gz_file'] = '123.tar.gz'
-override['example1']['a']['email']['onError']['business'] = '123@example.com'
-override['example1']['a']['email']['onError']['nonbusiness'] = '123@examle.com'
-override['example1']['a']['taskscheduler']['instance'] = ["123"]
-override['example1']['b']['ABC']['env_name'] = 'DEV'
-override['example1']['b']['ABC']['database']['server'] = 'a'
-override['example1']['b']['ABC']['database']['name'] = 'qa'
-override['example1']['b']['ABC']['database']['user'] = 'qa'
-override['example1']['b']['ABC']['database']['sid'] = '123'
-override['example1']['b']['ABC']['database']['port'] = '1000'
-override['example1']['b']['webserver']['conn']['pool_size'] = '10'
-override['example1']['b']['webserver']['something']['somethingmore']['test'] = [1000, 2000]
-override['example1']['b']['server']['uri'] = 'example.com'
-override['example1']['b']['s3']['remote_path'] = '/path/'
-override['example1']['b']['tar.gz_file'] = '123.tar.gz'
-override['example1']['b']['email']['onError']['business'] = '123@example.com'
-override['example1']['b']['email']['onError']['nonbusiness'] = '123@examle.com'
-override['example1']['b']['taskscheduler']['instance'] = ["123"]
+# default attributes from dev environment
+default['dev']['corp']['packages'] = ["httpd"]
+
+# default attributes from prod environment
+default['prod']['corp']['packages'] = ["httpd", "somethingelse"]
+default['prod']['apache']['something']['release'] = '23.el7'
+default['prod']['2']['test'] = 'test'
+default['prod']['topleveltest'] = 'test'
+
+# override attributes from prod environment
+override['prod']['a']['ABC']['env_name'] = 'DEV'
+override['prod']['a']['ABC']['database']['server'] = 'a'
+override['prod']['a']['ABC']['database']['name'] = 'qa'
+override['prod']['a']['ABC']['database']['user'] = 'qa'
+override['prod']['a']['ABC']['database']['sid'] = '123'
+override['prod']['a']['ABC']['database']['port'] = '1000'
+override['prod']['a']['webserver']['conn']['pool_size'] = '10'
+override['prod']['a']['webserver']['something']['somethingmore']['test'] = [1000, 2000]
+override['prod']['a']['server']['uri'] = 'example.com'
+override['prod']['a']['s3']['remote_path'] = '/path/'
+override['prod']['a']['tar.gz_file'] = '123.tar.gz'
+override['prod']['a']['email']['onError']['business'] = '123@example.com'
+override['prod']['a']['email']['onError']['nonbusiness'] = '123@examle.com'
+override['prod']['a']['taskscheduler']['instance'] = ["123"]
+override['prod']['b']['ABC']['env_name'] = 'DEV'
+override['prod']['b']['ABC']['database']['server'] = 'a'
+override['prod']['b']['ABC']['database']['name'] = 'qa'
+override['prod']['b']['ABC']['database']['user'] = 'qa'
+override['prod']['b']['ABC']['database']['sid'] = '123'
+override['prod']['b']['ABC']['database']['port'] = '1000'
+override['prod']['b']['webserver']['conn']['pool_size'] = '10'
+override['prod']['b']['webserver']['something']['somethingmore']['test'] = [1000, 2000]
+override['prod']['b']['server']['uri'] = 'example.com'
+override['prod']['b']['s3']['remote_path'] = '/path/'
+override['prod']['b']['tar.gz_file'] = '123.tar.gz'
+override['prod']['b']['email']['onError']['business'] = '123@example.com'
+override['prod']['b']['email']['onError']['nonbusiness'] = '123@examle.com'
+override['prod']['b']['taskscheduler']['instance'] = ["123"]

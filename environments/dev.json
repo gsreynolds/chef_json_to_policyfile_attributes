@@ -1,0 +1,26 @@
+{
+  "name": "dev",
+  "description": "This is an example environment defined as JSON",
+  "chef_type": "environment",
+  "json_class": "Chef::Environment",
+  "default_attributes": {
+    "corp": {
+      "packages": [
+        "httpd"
+      ]
+    }
+  },
+  "override_attributes": {
+  },
+  "cookbook_versions": {
+    "build-essential": "= 8.2.1",
+    "haproxy": "= 7.1.0",
+    "line": "= 2.9.1",
+    "mingw": "= 2.1.0",
+    "ntp": "= 3.7.0",
+    "seven_zip": "= 3.1.0",
+    "test": "= 0.1.0",
+    "windows": "= 6.0.0",
+    "yum-epel": "= 3.3.0"
+  }
+}
