@@ -16,96 +16,51 @@
       }
     },
     "2": {
-      "test": "test"
+      "test": 2
     },
     "topleveltest": "test"
   },
   "override_attributes": {
-    "a": {
-      "ABC": {
-        "env_name": "DEV",
-        "database": {
-          "server": "a",
-          "name": "qa",
-          "user": "qa",
-          "sid": "123",
-          "port": "1000"
-        }
-      },
-      "webserver": {
-        "conn": {
-          "pool_size": "10"
-        },
-        "something": {
-          "somethingmore": {
-            "test": [
-              1000,
-              2000
-            ]
-          }
-        }
-      },
-      "server": {
-        "uri": "example.com"
-      },
-      "s3": {
-        "remote_path": "/path/"
-      },
-      "tar.gz_file": "123.tar.gz",
-      "email": {
-        "onError": {
-          "business": "123@example.com",
-          "nonbusiness": "123@examle.com"
-        }
-      },
-      "taskscheduler": {
-        "instance": [
-          "123"
-        ]
+    "ABC": {
+      "env_name": "DEV",
+      "database": {
+        "server": "a",
+        "name": "qa",
+        "user": "qa",
+        "sid": "123",
+        "port": "1000"
       }
     },
-    "b": {
-      "ABC": {
-        "env_name": "DEV",
-        "database": {
-          "server": "a",
-          "name": "qa",
-          "user": "qa",
-          "sid": "123",
-          "port": "1000"
+    "webserver": {
+      "conn": {
+        "pool_size": "10"
+      },
+      "something": {
+        "somethingmore": {
+          "test": [
+            1000,
+            2000
+          ]
         }
-      },
-      "webserver": {
-        "conn": {
-          "pool_size": "10"
-        },
-        "something": {
-          "somethingmore": {
-            "test": [
-              1000,
-              2000
-            ]
-          }
-        }
-      },
-      "server": {
-        "uri": "example.com"
-      },
-      "s3": {
-        "remote_path": "/path/"
-      },
-      "tar.gz_file": "123.tar.gz",
-      "email": {
-        "onError": {
-          "business": "123@example.com",
-          "nonbusiness": "123@examle.com"
-        }
-      },
-      "taskscheduler": {
-        "instance": [
-          "123"
-        ]
       }
+    },
+    "server": {
+      "uri": "example.com"
+    },
+    "s3": {
+      "remote_path": "/path/"
+    },
+    "tar.gz_file": "123.tar.gz",
+    "email": {
+      "onError": {
+        "business": "123@example.com",
+        "nonbusiness": "123@examle.com"
+      }
+    },
+    "taskscheduler": {
+      "instance": [
+        "123"
+      ]
     }
   },
   "cookbook_versions": {
